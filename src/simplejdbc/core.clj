@@ -8,14 +8,16 @@
   (println x "Hello, World!"))
 
 
-(defdb db (postgres {:classname "org.postgresql.Driver"
-                     :subprotocol "postgresql"
-                     :subname "//localhost:5432/clojure"
+(defdb db (postgres {:db "clojure"
                      :user "postgres"
                      :password "postgres"}))
 
 (defentity employee)
 
-(select employee)
-
 (println (select employee))
+
+(println (select employee
+                 (fields :empid :firstname)))
+
+(println (select employee
+                 (where {:empid 940761})))
