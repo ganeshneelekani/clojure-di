@@ -1,3 +1,3 @@
-# Introduction to clojure-di
+# Introduction to simplejdbc
 
 TODO: write [great documentation](http://jacobian.org/writing/what-to-write/)
